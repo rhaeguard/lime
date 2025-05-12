@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Slides</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="shell"></div>
+    <script src="/dist/lime.js"></script>
+    <script>
+        let slides = [
+            new Lime.Slide(
+                Lime.SlideLayout.SINGLE_COLUMN,
+                new Lime.Container(
+                    new Lime.Title(
+                        "Demo Presentation"
+                    ),
+                    new Lime.List(
+                        [
+                            new Lime.Text("🧔🏻‍♂️Foo!"),
+                            new Lime.Text("🌍Bar"),
+                            new Lime.Text("🍁Canada"),
+                            new Lime.Text("🍁Canada 1"),
+                            new Lime.Text("🍁Canada 2"),
+                            new Lime.Image(
+                                "https://images.theconversation.com/files/625049/original/file-20241010-15-95v3ha.jpg"
+                            ),
+                            new Lime.Text("🍁Canada 3"),
+                        ]
+                    )
+                )
+            ),
+            new Lime.Slide(
+                Lime.SlideLayout.TWO_COLUMNS,
+                new Lime.Container(
+                    new Lime.Title("The second page/first block"),
+                    new Lime.List(
+                        [
+                            new Lime.Image(
+                                "https://images.theconversation.com/files/625049/original/file-20241010-15-95v3ha.jpg"
+                            ),
+                            new Lime.Text("🍁Canada"),
+                        ]
+                    )
+                ),
+                new Lime.Container(
+                    new Lime.Title("The second page/second block"),
+                    new Lime.Text(`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam semper ac ante ullamcorper ultricies. Curabitur in arcu ut mi efficitur aliquet. Morbi sit amet venenatis nulla. Pellentesque in felis justo. Suspendisse gravida odio convallis porttitor congue. Sed et nulla tellus. Aliquam erat volutpat. Praesent fringilla est vulputate leo congue pulvinar. Donec consectetur dui eget placerat convallis. Curabitur convallis placerat dolor sollicitudin posuere. Curabitur congue nisi interdum, dictum arcu ut, porta metus. Nulla vel fringilla eros. Sed at finibus urna. Ut non erat suscipit magna convallis mattis non tristique nisi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.`)
+                ),
+            ),
+        ];
+
+        Lime.generate("shell", slides);
+    </script>
+</body>
+
+</html>
