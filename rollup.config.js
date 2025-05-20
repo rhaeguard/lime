@@ -10,13 +10,7 @@ export default {
       format: "iife",
       name: "Lime", // this is the namespace of your library
       sourcemap: true,
-    },
-    {
-      file: "examples/dist/lime.js",
-      format: "iife",
-      name: "Lime", // this is the namespace of your library
-      sourcemap: true,
-    },
+    }
   ],
   plugins: [resolve(), commonjs(), typescript()],
 };
